@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: irys-gallery-api
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: ""
+    startCommand: python api/app.py
+    runtime: python
+    repo: https://github.com/Korgonxx/irys-gallery-vercel
+    branch: main
+    envVars:
+      - key: SUPABASE_URL
+        value: https://yebzbkcjsgvlckmwmnep.supabase.co
+      - key: SUPABASE_KEY
+        value: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InllYnpia2Nqc2d2bGNrbXdtbmVwIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTE4MTA4MzYsImV4cCI6MjA2NzM4NjgzNn0.7WYR9fUscDcSv9k82FbzeItEspkw5YDUfW53mcvq-Wc
+      - key: DATABASE_URL
+        value: postgresql://postgres.yebzbkcjsgvlckmwmnep:KG78D%3F%2B%40jepFVNX@aws-0-ap-south-1.pooler.supabase.com:6543/postgres
